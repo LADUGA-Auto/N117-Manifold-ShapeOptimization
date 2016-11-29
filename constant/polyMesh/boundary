@@ -1,0 +1,70 @@
+/*----------------------------------------------------------------------------------*\
+|                                                                                    | 
+|    ANSA_VERSION: 14.0.0                                                            | 
+|                                                                                    | 
+|    file created by  A N S A  Thu Aug 01 18:14:32 2013                              | 
+|                                                                                    | 
+|    Output from: D:/work/N117-Intake/ccm/Untitled                                   | 
+|                                                                                    | 
+\*----------------------------------------------------------------------------------*/
+
+
+
+FoamFile
+{
+	version 2.0;
+	format ascii;
+	class polyBoundaryMesh;
+	location "";
+	object boundary;
+}
+/*---------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------*/
+
+
+6
+(
+
+	inlet //INLET_CHANNEL
+	{
+		type wall;
+		startFace 951090;
+		nFaces 329;
+	}
+
+	WALL_TANK
+	{
+		type wall;
+		startFace 951419;
+		nFaces 59578;
+	}
+
+	OUTLET_1
+	{
+		type wall;
+		startFace 1010997;
+		nFaces 186;
+	}
+
+	OUTLET_2
+	{
+		type wall;
+		startFace 1011183;
+		nFaces 183;
+	}
+
+	OUTLET_3
+	{
+		type wall;
+		startFace 1011366;
+		nFaces 182;
+	}
+
+	OUTLET_4
+	{
+		type wall;
+		startFace 1011548;
+		nFaces 196;
+	}
+
+)

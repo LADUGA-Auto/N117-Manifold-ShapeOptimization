@@ -1,0 +1,123 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volVectorField;
+    object      U;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 1 -1 0 0 0 0];
+
+internalField   uniform (0 0 0);
+
+boundaryField
+{
+    inlet
+    {
+        type            surfaceNormalFixedValue;
+       refValue           uniform -52;
+    }
+
+    OUTLET_4
+    {
+        //type            zeroGradient;
+        type            inletOutlet;
+        inletValue      uniform (0 0 0);
+    }
+    
+    OUTLET_3
+    {
+        //type            zeroGradient;
+        type            inletOutlet;
+        inletValue      uniform (0 0 0);
+    }
+
+    OUTLET_2
+    {
+        //type            zeroGradient;
+        type            inletOutlet;
+        inletValue      uniform (0 0 0);
+    }
+
+    OUTLET_1
+    {
+        //type            zeroGradient;
+        type            inletOutlet;
+        inletValue      uniform (0 0 0);
+    }
+
+    WALL_TANK
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+
+    WALL_INLET_CHANNEL
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+
+    WALL_CHANNEL_4
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+
+    WALL_CHANNEL_3
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+
+    WALL_CHANNEL_2
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    
+    WALL_CHANNEL_1
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }    
+
+    SIDE_4
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+
+    SIDE_3
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+
+    SIDE_2
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+
+    SIDE_1
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+
+    frontAndBack
+    {
+        type            empty;
+    }
+}
+
+// ************************************************************************* //

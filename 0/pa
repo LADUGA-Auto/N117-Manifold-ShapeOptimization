@@ -1,0 +1,108 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      p;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -2 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    inlet
+    {
+        type            zeroGradient;
+    }
+
+    OUTLET_4
+    {
+        type            adjointOutletPressure;
+        value           uniform 0;
+    }
+
+    OUTLET_3
+    {
+        type            adjointOutletPressure;
+        value           uniform 0;
+    }
+
+    OUTLET_2
+    {
+        type            adjointOutletPressure;
+        value           uniform 0;
+    }
+    
+    OUTLET_1
+    {
+        type            adjointOutletPressure;
+        value           uniform 0;
+    }
+
+    WALL_TANK
+    {
+        type            zeroGradient;
+    }
+
+    WALL_INLET_CHANNEL
+    {
+        type            zeroGradient;
+    }
+
+    WALL_CHANNEL_4
+    {
+        type            zeroGradient;
+    }
+
+    WALL_CHANNEL_3
+    {
+        type            zeroGradient;
+    }
+
+    WALL_CHANNEL_2
+    {
+        type            zeroGradient;
+    }
+    
+    WALL_CHANNEL_1
+    {
+        type            zeroGradient;
+    }
+
+    SIDE_4
+    {
+        type            zeroGradient;
+    }
+
+    SIDE_3
+    {
+        type            zeroGradient;
+    }
+
+    SIDE_2
+    {
+        type            zeroGradient;
+    }
+
+    SIDE_1
+    {
+        type            zeroGradient;
+    }
+
+    frontAndBack
+    {
+        type            empty;
+    }
+}
+
+// ************************************************************************* //

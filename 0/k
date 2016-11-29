@@ -1,0 +1,102 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      k;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -2 0 0 0 0];
+
+internalField   uniform 40;//253.5;//uniform 0.375;
+
+boundaryField
+{
+    inlet
+    {
+        type            fixedValue;
+        value           $internalField;//uniform 0.375;
+    }
+    OUTLET_4
+    {
+        type            zeroGradient;
+    }
+    OUTLET_3
+    {
+        type            zeroGradient;
+    }
+    OUTLET_2
+    {
+        type            zeroGradient;
+    }
+    OUTLET_1
+    {
+        type            zeroGradient;
+    }    
+    WALL_TANK
+    {
+        type            kqRWallFunction;
+        value           $internalField;//uniform 0.375;
+    }
+    WALL_INLET_CHANNEL
+    {
+        type            kqRWallFunction;
+        value           $internalField;//uniform 0.375;
+    }
+    WALL_CHANNEL_4
+    {
+        type            kqRWallFunction;
+        value           $internalField;//uniform 0.375;
+    }    
+    WALL_CHANNEL_3
+    {
+        type            kqRWallFunction;
+        value           $internalField;//uniform 0.375;
+    }
+    WALL_CHANNEL_2
+    {
+        type            kqRWallFunction;
+        value           $internalField;//uniform 0.375;
+    }
+    WALL_CHANNEL_1
+    {
+        type            kqRWallFunction;
+        value           $internalField;//uniform 0.375;
+    }
+    SIDE_4
+    {
+        type            kqRWallFunction;
+        value           $internalField;//uniform 0.375;
+    }
+    SIDE_3
+    {
+        type            kqRWallFunction;
+        value           $internalField;//uniform 0.375;
+    }    
+    SIDE_2
+    {
+        type            kqRWallFunction;
+        value           $internalField;//uniform 0.375;
+    }
+    SIDE_1
+    {
+        type            kqRWallFunction;
+        value           $internalField;//uniform 0.375;
+    }
+    frontAndBack
+    {
+        type            empty;
+    }
+}
+
+
+// ************************************************************************* //
